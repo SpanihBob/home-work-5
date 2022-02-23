@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- 1.Написать функцию возведения числа в степень -->
+
+        <!-- <script>
+            let raise = +prompt("введите число");
+            let power = +prompt("введите степень для числа");
+            let t = 1;
+            let raise_power = 1;
+            function raiseANumberToAPower(){ 
+                t++                     //заводим счетчик
+                raise_power *= raise    //делаем действие умножения числа на себя            
+	            if(t > power) return    //условие отключения рекурсии 
+                raiseANumberToAPower(); // здесь функция вызывает сама себя
+	            }
+            raiseANumberToAPower();
+            alert(raise_power)
+        </script> -->
+
+    <!-- 2.Написать функцию поиска наибольшего общего делителя. -->
+    
+<!-- <script>
+    /*Алгоритм Евклида – это алгоритм нахождения наибольшего общего делителя (НОД) пары целых чисел.
+    1. Большее число делим на меньшее.
+    2. Если делится без остатка, то меньшее число и есть НОД (следует выйти из цикла).
+    3. Если есть остаток, то большее число заменяем на остаток от деления.
+    4. Переходим к пункту 1.*/
+
+    let del1 = +prompt("введите первое число");
+    let del2 = +prompt("введите второе число");
+    function greatestCommonFactor(){
+        if(del1==0 || del2==0)return
+        else if(del1>del2)(del1=del1%del2)
+        else(del2=del2%del1)
+        greatestCommonFactor()
+    }
+    greatestCommonFactor()
+    alert(del1 + del2)
+</script> -->
+
+    <!-- 3. Написать функцию для поиска максимальной цифры в числе. -->
+
+<!-- <script>
+    let arr = prompt("введите числа через пробел")
+    let num = arr.split(' ');   //переводим введенную строку в массив
+    let i=1;                    //заводим счетчик циклов
+    let ret = num[0];           //вводим переменную в которой будет храниться максимум
+    function max(){
+        if(num.length == 0) return undefined;//если данные не ввели будет произведен выход         
+        else if(i>=num.length)return         //если дошли до последнего элемента массива будет произведен выход
+        if(num[i]>ret)
+        ret = num[i];
+        i++;
+        max()
+    }
+    max()
+    alert(ret)
+</script> -->
+
+<!-- 4. Написать функцию, которая определяет простое ли переданное число. Число - простое, если делится 
+    без остатка только на 1 и на само себя. Чтобы проверить простое оно или нет, надо проверить есть 
+ли еще делители кроме 1 и самого себя-->
+
+<!--<script>
+    // Prime number
+    let Prime_number = +prompt("введите число");
+    let i=2;    
+    if(Prime_number==2)alert("число простое");                        
+    else if(Prime_number!=2){function PrimeNumber(){
+        if(i>=Prime_number)return;
+        else if(Prime_number%i==0) return"число не простое";
+        else return "число простое";
+        i++;
+        PrimeNumber()
+    }
+    PrimeNumber()
+    alert(PrimeNumber())}
+</script> -->
+
+<!-- 5. Написать функцию для вывода всех множителей переданного числа в возрастающем порядке.
+Например: число 18 – множители 2 * 3 * 3. -->
+
+<!-- <script>
+    let delimoe = +prompt("введите целое число");
+    let i = 1
+    function allDivisors(){if(i>=delimoe)return
+        else if (delimoe%i==0)document.write(i + " , ");
+        i++;
+        allDivisors()}
+    allDivisors()    
+</script> -->
+
+<!-- 6. Написать функцию, которая возвращает число Фибоначчи по переданному порядковому номеру.
+Числа Фибоначчи: 1, 1, 2, 3, 5, 8, 13… Ряд основывается на том, что каждое число равно сумме двух предыдущих чисел.
+Например: порядковый номер 3 – число 2, порядковый номер 6 – число 8. -->
+
+<script>
+    let n = +prompt("введите порядковый номер числа Фибоначчи");
+    let Fib1 = 1;
+        console.log(Fib1);
+    let Fib2 = 1;
+        console.log(Fib2);
+        let ret = 0;
+        let i = 1;
+    function Fibonacci(n){
+    if(arguments.length == 0) return undefined;
+    else if(i>n-2)return
+    else{ 
+        if(Fib1<=Fib2){
+            Fib1 = Fib1 + Fib2;
+            console.log(Fib1);
+            ret = Fib1}
+        else {  
+            Fib2 = Fib1 + Fib2;
+            console.log(Fib2);
+            ret = Fib2}
+            i++
+        }
+    Fibonacci(n)    
+}
+Fibonacci(n)
+alert(ret)
+</script>
+
+</body>
+</html>
